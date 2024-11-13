@@ -8,6 +8,7 @@ var _link = _interopRequireDefault(require("next/link"));
 var _menuData = require("@/app/constants/menuData");
 var _types = require("@/app/types/types");
 var _lucideReact = require("lucide-react");
+var _ThemeSwitcher = _interopRequireDefault(require("./ThemeSwitcher"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 function NavBar() {
   return /*#__PURE__*/React.createElement("header", {
@@ -28,15 +29,7 @@ function NavBar() {
       href: link.url,
       className: "nav__link"
     }, link.name));
-  }), /*#__PURE__*/React.createElement("li", {
-    className: "nav__item--theme-toggle"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "nav__theme-toggle"
-  }, /*#__PURE__*/React.createElement(_lucideReact.Moon, {
-    className: "nav__icon nav__item"
-  }), /*#__PURE__*/React.createElement(_lucideReact.Sun, {
-    className: "nav__icon nav__item"
-  }))), /*#__PURE__*/React.createElement("li", {
+  }), /*#__PURE__*/React.createElement(_ThemeSwitcher.default, null), /*#__PURE__*/React.createElement("li", {
     className: "nav__item--theme-toggle"
   }, /*#__PURE__*/React.createElement("div", {
     className: "nav__theme-toggle"

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { navbarLinks } from "@/app/constants/menuData";
 import { NavLink } from "@/app/types/types";
-import { Globe, Moon, Sun } from "lucide-react";
+import { Globe } from "lucide-react";
+import ThemeSwitcher from "./ThemeSwitcher";
 function NavBar() {
   return (
     <header className="container">
@@ -17,12 +18,7 @@ function NavBar() {
               </Link>
             </li>
           ))}
-          <li className="nav__item--theme-toggle">
-            <div className="nav__theme-toggle">
-              <Moon className="nav__icon nav__item" />
-              <Sun className="nav__icon nav__item" />
-            </div>
-          </li>
+          <ThemeSwitcher />
           <li className="nav__item--theme-toggle">
             <div className="nav__theme-toggle">
               <Globe className="nav__icon nav__item" />
