@@ -5,7 +5,7 @@
   gap: map-get($spacing, "lg");
   margin: 0 auto;
   padding: map-get($spacing, "md") 0;
-  //   box-shadow: map-get($box-shadow, "sm");
+
   &__logo {
     color: var(--accent);
   }
@@ -27,9 +27,25 @@
   }
 
   &__link {
-    // Agrega tus estilos aquí para los enlaces
+    // Estilos para los enlaces
   }
 
-  &__item--theme-toggle {
+  &__theme-switcher {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-box);
+    padding: map-get($spacing, "sm");
+    border: 1px solid var(--bg-box);
+    border-radius: map-get($border-radius, "md");
+  }
+
+  &__toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .nav__icon {
+      color: var(--text-secondary);
+    }
   }
 }

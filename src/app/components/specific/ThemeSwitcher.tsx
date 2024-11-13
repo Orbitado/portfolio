@@ -8,15 +8,20 @@ function ThemeSwitcher() {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+
   return (
-    <li className="nav__item--theme-toggle">
+    <li className="nav__theme-switcher">
       <button
         type="button"
         aria-label="Toggle dark mode"
-        className="nav__item nav__theme-toggle"
+        className="nav__toggler"
         onClick={toggleTheme}
       >
-        {theme === "dark" ? <Moon /> : <Sun />}
+        {theme === "dark" ? (
+          <Moon className="nav__icon" />
+        ) : (
+          <Sun className="nav__icon" />
+        )}
       </button>
     </li>
   );

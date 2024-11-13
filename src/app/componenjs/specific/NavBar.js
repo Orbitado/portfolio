@@ -30,11 +30,11 @@ function NavBar() {
       className: "nav__link"
     }, link.name));
   }), /*#__PURE__*/React.createElement(_ThemeSwitcher.default, null), /*#__PURE__*/React.createElement("li", {
-    className: "nav__item--theme-toggle"
+    className: "nav__item"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "nav__theme-toggle"
+    className: "nav__toggler"
   }, /*#__PURE__*/React.createElement(_lucideReact.Globe, {
-    className: "nav__icon nav__item"
+    className: "nav__icon"
   }))))));
 }
 var _default = exports.default = NavBar;

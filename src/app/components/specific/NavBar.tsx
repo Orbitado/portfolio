@@ -19,9 +19,9 @@ function NavBar() {
             </li>
           ))}
           <ThemeSwitcher />
-          <li className="nav__item--theme-toggle">
-            <div className="nav__theme-toggle">
-              <Globe className="nav__icon nav__item" />
+          <li className="nav__item">
+            <div className="nav__toggler">
+              <Globe className="nav__icon" />
             </div>
           </li>
         </ul>

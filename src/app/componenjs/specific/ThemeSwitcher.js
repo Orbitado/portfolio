@@ -15,12 +15,16 @@ function ThemeSwitcher() {
     setTheme(theme === "light" ? "dark" : "light");
   };
   return /*#__PURE__*/React.createElement("li", {
-    className: "nav__item--theme-toggle"
+    className: "nav__theme-switcher"
   }, /*#__PURE__*/React.createElement("button", {
     type: "button",
     "aria-label": "Toggle dark mode",
-    className: "nav__item nav__theme-toggle",
+    className: "nav__toggler",
     onClick: toggleTheme
-  }, theme === "dark" ? /*#__PURE__*/React.createElement(_lucideReact.Moon, null) : /*#__PURE__*/React.createElement(_lucideReact.Sun, null)));
+  }, theme === "dark" ? /*#__PURE__*/React.createElement(_lucideReact.Moon, {
+    className: "nav__icon"
+  }) : /*#__PURE__*/React.createElement(_lucideReact.Sun, {
+    className: "nav__icon"
+  })));
 }
 var _default = exports.default = ThemeSwitcher;
