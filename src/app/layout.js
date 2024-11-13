@@ -8,6 +8,9 @@ exports.metadata = void 0;
 require("./styles.css");
 var _google = require("next/font/google");
 var _NavBar = _interopRequireDefault(require("./components/specific/NavBar"));
+var _themeContext = require("./context/themeContext");
+var _react = require("react");
+var _useTheme = require("./hooks/useTheme");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var onest = (0, _google.Onest)({
   subsets: ["latin"],
@@ -51,11 +54,10 @@ var metadata = exports.metadata = {
 function RootLayout(_ref) {
   var children = _ref.children;
   return /*#__PURE__*/React.createElement("html", {
-    lang: "en",
-    "data-theme": "light"
+    lang: "en"
   }, /*#__PURE__*/React.createElement("body", {
     className: "".concat(onest.variable)
-  }, /*#__PURE__*/React.createElement(_NavBar.default, null), /*#__PURE__*/React.createElement("main", {
+  }, /*#__PURE__*/React.createElement(_themeContext.ThemeProvider, null, /*#__PURE__*/React.createElement(_NavBar.default, null), /*#__PURE__*/React.createElement("main", {
     className: "container"
-  }, children)));
+  }, children))));
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { navbarLinks } from "@/app/constants/menuData";
-import { NavLink } from "@/app/types/types";
+import { NavLinkProps } from "@/app/types/types";
 import { Globe } from "lucide-react";
 import ThemeSwitcher from "./ThemeSwitcher";
 function NavBar() {
@@ -11,7 +11,7 @@ function NavBar() {
           <Link href="/">LV</Link>
         </h1>
         <ul className="nav__list">
-          {navbarLinks.map((link: NavLink) => (
+          {navbarLinks.map((link: NavLinkProps) => (
             <li key={link.name} className="nav__item">
               <Link href={link.url} className="nav__link">
                 {link.name}

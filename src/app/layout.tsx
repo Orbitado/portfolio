@@ -2,6 +2,9 @@ import "./styles.css";
 import type { Metadata } from "next";
 import { Onest } from "next/font/google";
 import NavBar from "./components/specific/NavBar";
+import { ThemeProvider } from "./context/themeContext";
+import { use } from "react";
+import { useTheme } from "./hooks/useTheme";
 
 const onest = Onest({
   subsets: ["latin"],
@@ -74,10 +77,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en">
       <body className={`${onest.variable}`}>
-        <NavBar />
-        <main className="container">{children}</main>
+        <ThemeProvider>
+          <NavBar />
+          <main className="container">{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
