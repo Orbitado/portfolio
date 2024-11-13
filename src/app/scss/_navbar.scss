@@ -13,11 +13,14 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: map-get($spacing, "md");
   }
 
   &__item {
     color: var(--text-secondary);
+    transition: color 0.1s ease-in-out;
+
     &:hover {
       color: var(--link-hover);
     }
@@ -25,5 +28,8 @@
 
   &__link {
     // Agrega tus estilos aquí para los enlaces
+  }
+
+  &__item--theme-toggle {
   }
 }

@@ -9,8 +9,6 @@ require("./styles.css");
 var _google = require("next/font/google");
 var _NavBar = _interopRequireDefault(require("./components/specific/NavBar"));
 var _themeContext = require("./context/themeContext");
-var _react = require("react");
-var _useTheme = require("./hooks/useTheme");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var onest = (0, _google.Onest)({
   subsets: ["latin"],

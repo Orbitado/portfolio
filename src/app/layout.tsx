@@ -3,8 +3,6 @@ import type { Metadata } from "next";
 import { Onest } from "next/font/google";
 import NavBar from "./components/specific/NavBar";
 import { ThemeProvider } from "./context/themeContext";
-import { use } from "react";
-import { useTheme } from "./hooks/useTheme";
 
 const onest = Onest({
   subsets: ["latin"],

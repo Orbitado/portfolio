@@ -13,7 +13,7 @@ function ThemeSwitcher() {
       <button
         type="button"
         aria-label="Toggle dark mode"
-        className="nav__theme-toggle"
+        className="nav__item nav__theme-toggle"
         onClick={toggleTheme}
       >
         {theme === "dark" ? <Moon /> : <Sun />}
