@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: map-get($spacing, "lg");
+  margin: 0 auto;
+  padding: map-get($spacing, "md") 0;
+  //   box-shadow: map-get($box-shadow, "sm");
+  &__logo {
+    color: var(--accent);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: map-get($spacing, "md");
+  }
+
+  &__item {
+    color: var(--text-secondary);
+    &:hover {
+      color: var(--link-hover);
+    }
+  }
+
+  &__link {
+    // Agrega tus estilos aquí para los enlaces
+  }
+}
