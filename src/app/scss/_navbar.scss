@@ -17,6 +17,17 @@
     gap: map-get($spacing, "md");
   }
 
+  &__list-mobile {
+    display: none;
+  }
+
+  &__list--togglers {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: map-get($spacing, "md");
+  }
+
   &__item {
     color: var(--text-secondary);
     transition: color 0.1s ease-in-out;
@@ -24,10 +35,6 @@
     &:hover {
       color: var(--link-hover);
     }
-  }
-
-  &__link {
-    // Estilos para los enlaces
   }
 
   &__theme-switcher {
@@ -39,6 +46,10 @@
     border-radius: map-get($border-radius, "md");
   }
 
+  &__item--mobile {
+    display: none;
+  }
+
   &__toggler {
     display: flex;
     justify-content: center;
@@ -47,5 +58,31 @@
     .nav__icon {
       color: var(--text-secondary);
     }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, "md")) {
+  .nav {
+    &__item--mobile {
+      display: block;
+    }
+  }
+
+  .open {
+    background-color: var(--bg-main);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: map-get($spacing, "md");
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: map-get($spacing, "md") map-get($spacing, "lg");
+    z-index: 10;
+  }
+
+  .close {
+    display: none;
   }
 }
