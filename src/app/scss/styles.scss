@@ -1,11 +1,33 @@
 @import "./_variables.scss";
 
+@import "./_variables.scss";
+
+[data-theme="light"] {
+  --bg-main: #f9fafb;
+  --bg-section: #ffffff;
+  --bg-card: #f9fafb;
+  --bg-box: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --accent: #4f46e5;
+  --link-hover: #4f46e5;
+}
+
+[data-theme="dark"] {
+  --bg-main: #111827;
+  --bg-section: #1f2937;
+  --bg-card: #111827;
+  --bg-box: #1f2937;
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --accent: #818cf8;
+  --link-hover: #818cf8;
+}
+
 html {
   max-width: 100vw;
   overflow-x: hidden;
   height: 100%;
-
-  color-scheme: dark;
 }
 
 main {
@@ -15,7 +37,8 @@ main {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-main);
+  font-family: Onest, Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,7 +59,25 @@ ul {
 }
 
 button {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  line-height: inherit;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
 }
 
 .responsive-image {
@@ -46,3 +87,12 @@ button {
   object-fit: cover;
   object-position: center;
 }
+
+.container {
+  max-width: map-get($breakpoints, "lg");
+  padding: 0 map-get($spacing, "md");
+  margin: 0 auto;
+}
+
+// ==================================== NAVBAR ====================================
+@import "./_navbar.scss";

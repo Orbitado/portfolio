@@ -5,18 +5,16 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = RootLayout;
 exports.metadata = void 0;
-var _local = _interopRequireDefault(require("next/font/local"));
 require("./styles.css");
+var _google = require("next/font/google");
+var _NavBar = _interopRequireDefault(require("./components/specific/NavBar"));
+var _themeContext = require("./context/themeContext");
+var _MenuContext = require("./context/MenuContext");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-var geistSans = (0, _local.default)({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900"
-});
-var geistMono = (0, _local.default)({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900"
+var onest = (0, _google.Onest)({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-onest"
 });
 var metadata = exports.metadata = {
   title: "Leonardo Valdez | Frontend Developer Portfolio – React, TypeScript, Next.js Expert",
@@ -57,6 +55,8 @@ function RootLayout(_ref) {
   return /*#__PURE__*/React.createElement("html", {
     lang: "en"
   }, /*#__PURE__*/React.createElement("body", {
-    className: "".concat(geistSans.variable, " ").concat(geistMono.variable)
-  }, children));
+    className: "".concat(onest.variable)
+  }, /*#__PURE__*/React.createElement(_MenuContext.MenuProvider, null, /*#__PURE__*/React.createElement(_themeContext.ThemeProvider, null, /*#__PURE__*/React.createElement(_NavBar.default, null), /*#__PURE__*/React.createElement("main", {
+    className: "container"
+  }, children)))));
 }
