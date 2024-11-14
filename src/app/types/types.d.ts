@@ -5,6 +5,11 @@ export interface NavLinkProps {
 
 export type Theme = "light" | "dark";
 
+export interface MenuContextType {
+  isMenuOpen: boolean;
+  toggleMenu: () => void;
+}
+
 export interface ThemeContextProps {
   theme: Theme;
   setTheme: (theme: Theme) => void;
@@ -13,3 +18,4 @@ export interface ThemeContextProps {
 export interface ThemeProviderProps {
     children: ReactNode;
 }
+

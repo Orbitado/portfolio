@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Onest } from "next/font/google";
 import NavBar from "./components/specific/NavBar";
 import { ThemeProvider } from "./context/themeContext";
+import { MenuProvider } from "./context/MenuContext";
 
 const onest = Onest({
   subsets: ["latin"],
@@ -77,10 +78,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${onest.variable}`}>
-        <ThemeProvider>
-          <NavBar />
-          <main className="container">{children}</main>
-        </ThemeProvider>
+        <MenuProvider>
+          <ThemeProvider>
+            <NavBar />
+            <main className="container">{children}</main>
+          </ThemeProvider>
+        </MenuProvider>
       </body>
     </html>
   );

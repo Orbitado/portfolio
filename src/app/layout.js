@@ -9,6 +9,7 @@ require("./styles.css");
 var _google = require("next/font/google");
 var _NavBar = _interopRequireDefault(require("./components/specific/NavBar"));
 var _themeContext = require("./context/themeContext");
+var _MenuContext = require("./context/MenuContext");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var onest = (0, _google.Onest)({
   subsets: ["latin"],
@@ -55,7 +56,7 @@ function RootLayout(_ref) {
     lang: "en"
   }, /*#__PURE__*/React.createElement("body", {
     className: "".concat(onest.variable)
-  }, /*#__PURE__*/React.createElement(_themeContext.ThemeProvider, null, /*#__PURE__*/React.createElement(_NavBar.default, null), /*#__PURE__*/React.createElement("main", {
+  }, /*#__PURE__*/React.createElement(_MenuContext.MenuProvider, null, /*#__PURE__*/React.createElement(_themeContext.ThemeProvider, null, /*#__PURE__*/React.createElement(_NavBar.default, null), /*#__PURE__*/React.createElement("main", {
     className: "container"
-  }, children))));
+  }, children)))));
 }

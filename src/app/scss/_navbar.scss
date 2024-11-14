@@ -10,22 +10,28 @@
     color: var(--accent);
   }
 
+  &__icon {
+    color: var(--text-secondary);
+  }
+
   &__list {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: map-get($spacing, "md");
-  }
 
-  &__list-mobile {
-    display: none;
-  }
+    &--mobile {
+      display: none;
+    }
 
-  &__list--togglers {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: map-get($spacing, "md");
+    &--togglers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      flex-wrap: wrap;
+      gap: map-get($spacing, "md");
+      align-items: center;
+    }
   }
 
   &__item {
@@ -54,10 +60,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .nav__icon {
-      color: var(--text-secondary);
-    }
   }
 }
 
