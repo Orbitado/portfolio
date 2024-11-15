@@ -12,6 +12,7 @@ const onest = Onest({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vleonardojuanpablo.vercel.app/"),
   title:
     "Leonardo Valdez | Frontend Developer Portfolio – React, TypeScript, Next.js Expert",
   icons: {

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import { createContext, useState } from "react";
-import { MenuContextType } from "@/app/types/types";
+import { MenuContextType } from "../types/types";
 
 export const MenuContext = createContext<MenuContextType | undefined>(
   undefined
