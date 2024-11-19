@@ -77,14 +77,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light">
       <body className={`${onest.variable}`}>
-        <MenuProvider>
-          <ThemeProvider>
+        <ThemeProvider>
+          <MenuProvider>
             <NavBar />
             <main className="container">{children}</main>
-          </ThemeProvider>
-        </MenuProvider>
+          </MenuProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
