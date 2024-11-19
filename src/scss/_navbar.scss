@@ -5,6 +5,7 @@
   gap: map-get($spacing, "lg");
   margin: 0 auto;
   padding: map-get($spacing, "md") 0;
+  font-size: map-get($font-size, sm);
 
   &__logo {
     color: var(--accent);
@@ -36,7 +37,7 @@
 
   &__item {
     color: var(--text-secondary);
-    transition: color 0.1s ease-in-out;
+    transition: color 0.3s ease-in-out;
 
     &:hover {
       color: var(--link-hover);
