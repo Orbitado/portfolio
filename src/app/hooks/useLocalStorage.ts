@@ -6,41 +6,18 @@ function useLocalStorage<T>(
   key: string,
   initialValue: T
 ): [T, (value: T) => void] {
-  const [storedValue, setStoredValue] = useState<T>(() => {
+  const [value, setValue] = useState<T>(() => {
     if (typeof window === "undefined") {
       return initialValue;
     }
 
     try {
       const item = localStorage.getItem(key);
-      // Si no es JSON válido, devuelve el valor como una cadena
-      return item
-        ? isJSON(item)
-          ? JSON.parse(item)
-          : (item as unknown as T)
-        : initialValue;
-    } catch (error) {
-      console.error(`Error reading localStorage key: ${key}`, error);
+      return item ? parseStoredValue(item) : initialValue;
+    } catch {
       return initialValue;
     }
   });
-
-  const setValue = (value: T) => {
-    try {
-      setStoredValue(value);
-      if (typeof window !== "undefined") {
-        const valueToStore =
-          typeof value === "string" ||
-          typeof value === "number" ||
-          typeof value === "boolean"
-            ? value
-            : JSON.stringify(value);
-        localStorage.setItem(key, valueToStore as string);
-      }
-    } catch (error) {
-      console.error(`Error setting localStorage key: ${key}`, error);
-    }
-  };
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -48,25 +25,49 @@ function useLocalStorage<T>(
     try {
       const item = localStorage.getItem(key);
       if (item) {
-        setStoredValue(
-          isJSON(item) ? JSON.parse(item) : (item as unknown as T)
-        );
+        setValue(parseStoredValue(item));
       }
     } catch (error) {
-      console.error(`Error syncing localStorage key: ${key}`, error);
+      console.error(error);
     }
   }, [key]);
 
-  return [storedValue, setValue];
+  const setValueAndStore = (newValue: T) => {
+    try {
+      setValue(newValue);
+      if (typeof window !== "undefined") {
+        const valueToStore = serializeValue(newValue);
+        localStorage.setItem(key, valueToStore);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  return [value, setValueAndStore];
 }
 
-// Helper para verificar si un valor es JSON
-const isJSON = (value: string): boolean => {
+const parseStoredValue = <T>(item: string): T => {
   try {
-    JSON.parse(value);
-    return true;
+    return JSON.parse(item) as T;
   } catch {
-    return false;
+    return item as unknown as T;
+  }
+};
+
+const serializeValue = <T>(value: T): string => {
+  if (
+    typeof value === "string" ||
+    typeof value === "number" ||
+    typeof value === "boolean"
+  ) {
+    return value.toString();
+  }
+
+  try {
+    return JSON.stringify(value);
+  } catch {
+    return "";
   }
 };
 
