@@ -1,7 +1,5 @@
 @import "./_variables.scss";
 
-@import "./_variables.scss";
-
 [data-theme="light"] {
   --bg-main: #f9fafb;
   --bg-section: #ffffff;
@@ -80,6 +78,9 @@ button {
   }
 }
 
+@import "./atoms/typography";
+@import "./atoms/buttons";
+
 .responsive-image {
   display: block;
   max-width: 100%;
@@ -96,3 +97,5 @@ button {
 
 // ==================================== NAVBAR ====================================
 @import "./_navbar.scss";
+// ==================================== SUMMARY ====================================
+@import "./_summary.scss";

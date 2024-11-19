@@ -1,7 +1,8 @@
 import React from "react";
+import Summary from "./(pages)/Summary";
 
 function Page() {
-  return <div>Page</div>;
+  return <Summary />;
 }
 
 export default Page;

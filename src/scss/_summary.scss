@@ -1,0 +1,34 @@
+.summary {
+  padding: map-get($spacing, "xl") 0;
+  &__title {
+    text-align: center;
+    @extend .text-color--accent;
+  }
+
+  &__description {
+    text-align: center;
+    @extend .text-color--secondary;
+  }
+}
+
+@media (min-width: map-get($breakpoints, "xs")) {
+  .summary {
+    &__title {
+      font-size: map-get($font-size, lg);
+    }
+    &__description {
+      font-size: map-get($font-size, sm);
+    }
+  }
+}
+
+@media (min-width: map-get($breakpoints, "sm")) {
+  .summary {
+    &__title {
+      font-size: map-get($font-size, xl);
+    }
+    &__description {
+      font-size: map-get($font-size, md);
+    }
+  }
+}

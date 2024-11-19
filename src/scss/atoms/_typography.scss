@@ -1,0 +1,27 @@
+body {
+  font-family: map-get($font-family, onest), sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-main);
+  line-height: 1.5;
+}
+
+.text-color {
+  &--primary {
+    color: var(--text-primary);
+  }
+  &--secondary {
+    color: var(--text-secondary);
+  }
+  &--accent {
+    color: var(--accent);
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: var(--accent);
+
+  &:hover {
+    color: var(--link-hover);
+  }
+}
