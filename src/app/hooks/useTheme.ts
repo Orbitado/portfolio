@@ -3,10 +3,9 @@ import { ThemeContextProps } from "@/app/types/types";
 import { ThemeContext } from "@/app/context/themeContext";
 
 export const useTheme = (): ThemeContextProps => {
-    const context = useContext(ThemeContext);
-    if (!context) {
-      throw new Error("useTheme must be used within a ThemeProvider");
-    }
-    return context;
-  };
-  
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+  return context;
+};

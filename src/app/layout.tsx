@@ -12,6 +12,7 @@ const onest = Onest({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vleonardojuanpablo.vercel.app/"),
   title:
     "Leonardo Valdez | Frontend Developer Portfolio – React, TypeScript, Next.js Expert",
   icons: {
@@ -76,14 +77,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light">
       <body className={`${onest.variable}`}>
-        <MenuProvider>
-          <ThemeProvider>
+        <ThemeProvider>
+          <MenuProvider>
             <NavBar />
             <main className="container">{children}</main>
-          </ThemeProvider>
-        </MenuProvider>
+          </MenuProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
