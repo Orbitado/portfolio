@@ -1,5 +1,5 @@
 "use client";
-import { useMenu } from "@/app/hooks/useMenu";
+import { useMenu } from "@/hooks/useMenu";
 import { Menu, X } from "lucide-react";
 
 function NavToggler() {

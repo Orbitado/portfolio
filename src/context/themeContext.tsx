@@ -1,11 +1,7 @@
 "use client";
 import { createContext, useEffect } from "react";
-import {
-  Theme,
-  ThemeContextProps,
-  ThemeProviderProps,
-} from "@/app/types/types";
-import useLocalStorage from "@/app/hooks/useLocalStorage";
+import { Theme, ThemeContextProps, ThemeProviderProps } from "@/types/types";
+import useLocalStorage from "@/hooks/useLocalStorage";
 
 export const ThemeContext = createContext<ThemeContextProps | undefined>(
   undefined

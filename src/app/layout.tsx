@@ -1,9 +1,9 @@
 import "./styles.css";
 import type { Metadata } from "next";
 import { Onest } from "next/font/google";
-import NavBar from "./components/specific/NavBar";
-import { ThemeProvider } from "./context/themeContext";
-import { MenuProvider } from "./context/MenuContext";
+import NavBar from "@/components/specific/NavBar";
+import { ThemeProvider } from "@/context/themeContext";
+import { MenuProvider } from "@/context/MenuContext";
 
 const onest = Onest({
   subsets: ["latin"],
