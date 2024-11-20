@@ -1,0 +1,41 @@
+.experience {
+  &__title {
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__icon {
+    color: var(--accent);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($spacing, "md");
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($spacing, "sm");
+  }
+
+  &__role {
+    color: var(--accent);
+    font-size: map-get($font-size, "lg");
+  }
+
+  &__company {
+    color: var(--text-primary);
+  }
+
+  &__date {
+    @extend .text-color--secondary;
+  }
+
+  &__description {
+    @extend .text-color--secondary;
+  }
+}
