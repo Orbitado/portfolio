@@ -69,10 +69,6 @@ button {
   line-height: inherit;
   cursor: pointer;
 
-  &:focus {
-    outline: none;
-  }
-
   &:disabled {
     cursor: not-allowed;
     opacity: 0.6;
