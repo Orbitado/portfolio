@@ -1,7 +1,7 @@
 "use client";
-import { navbarLinks } from "@/app/constants/menuData";
-import { useMenu } from "@/app/hooks/useMenu";
-import { NavLinkProps } from "../../types/types";
+import { navbarLinks } from "@/constants/menuData";
+import { useMenu } from "@/hooks/useMenu";
+import { NavLinkProps } from "@/types/types";
 import Link from "next/link";
 
 function NavList() {
