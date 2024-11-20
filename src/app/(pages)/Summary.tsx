@@ -23,19 +23,20 @@ function Summary() {
           href="/assets/resume.pdf"
           download="Valdez Leonardo Juan Pablo - Frontend Developer.pdf"
           target="_blank"
+          rel="noopener noreferrer"
           className="btn btn--primary"
-          aria-label="Download Resume"
+          aria-label="Download Resume in PDF format of Leonardo Valdez"
         >
           <Download className="btn__icon" />
-          <span className="sr-only">Download Resume</span>
+          <span>Download Resume</span>
         </Link>
         <Link
           href="mailto:vleonardojuanpablo@icloud.com"
           className="btn btn--secondary"
-          aria-label="Contact Me"
+          aria-label="Send a mail to Leonardo Valdez"
         >
           <Mail className="btn__icon" />
-          <span className="sr-only">Contact Me</span>
+          <span>Contact Me</span>
         </Link>
       </article>
     </section>

@@ -3,8 +3,12 @@
   justify-content: center;
   align-items: center;
   gap: map-get($map: $spacing, $key: "sm");
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  padding: map-get($spacing, "md") map-get($spacing, "lg");
+  font-size: map-get($font-size, "sm");
+  @media screen and (max-width: map-get($breakpoints, "sm")) {
+    font-size: map-get($font-size, "xs");
+    padding: map-get($spacing, "sm") map-get($spacing, "md");
+  }
   border: none;
   border-radius: map-get($map: $border-radius, $key: "lg");
   cursor: pointer;

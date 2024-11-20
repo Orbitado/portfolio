@@ -82,7 +82,9 @@ export default function RootLayout({
         <ThemeProvider>
           <MenuProvider>
             <NavBar />
-            <main className="container">{children}</main>
+            <main className="container" id="#main-content">
+              {children}
+            </main>
           </MenuProvider>
         </ThemeProvider>
       </body>

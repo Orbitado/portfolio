@@ -11,6 +11,9 @@ function NavBar() {
         <h1 className="nav__logo">
           <Link href="/">LV</Link>
         </h1>
+        <Link href="/#main-content" className="sr-only">
+          Skip to main content
+        </Link>
         <NavList />
         <ul className="nav__list--togglers">
           <ThemeSwitcher />

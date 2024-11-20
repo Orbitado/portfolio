@@ -13,7 +13,7 @@
 
   &__text {
     text-align: center;
-    max-width: map-get($breakpoints, "md");
+    max-width: map-get($breakpoints, "lg");
     margin: 0 map-get($spacing, "xl");
     margin-bottom: map-get($spacing, "xl");
     @extend .text-color--secondary;
@@ -21,6 +21,8 @@
 
   &__actions {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: map-get($spacing, "md");
   }
 }
