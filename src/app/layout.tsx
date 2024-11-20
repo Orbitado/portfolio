@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title:
     "Leonardo Valdez | Frontend Developer Portfolio – React, TypeScript, Next.js Expert",
   icons: {
-    icon: "/images/portfolio.thumbnail.webp",
+    icon: "icon.svg",
   },
   description:
     "Explore the portfolio of Leonardo Valdez, a skilled Frontend Developer specializing in React, TypeScript, and Next.js. Connect with Leonardo to bring high-quality, scalable web solutions to life.",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/portfolio-thumbnail.webp", // Replace with actual image URL
+        url: "icon.svg",
         width: 1200,
         height: 630,
         alt: "Leonardo Valdez Portfolio Thumbnail",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "Leonardo Valdez | Frontend Developer Portfolio",
     description:
       "Explore the portfolio of Leonardo Valdez, a skilled Frontend Developer specializing in React, TypeScript, and Next.js.",
-    images: ["/images/portfolio-thumbnail.webp"], // Replace with actual image URL
+    images: ["icon.svg"],
   },
 };
 
