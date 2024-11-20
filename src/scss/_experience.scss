@@ -3,36 +3,82 @@
     color: var(--text-primary);
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    font-size: map-get($font-size, 4xl);
+    margin: map-get($spacing, lg) 0;
+    gap: map-get($spacing, sm);
   }
 
   &__icon {
     color: var(--accent);
+    width: map-get($font-size, 4xl);
+    height: map-get($font-size, 4xl);
+  }
+
+  &__content {
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: map-get($spacing, "md");
+    position: relative;
+
+    &::before {
+      border-left: 2px solid var(--text-secondary);
+      height: 512px;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
-    gap: map-get($spacing, "sm");
+    position: relative;
+    padding-left: map-get($spacing, "xl");
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    @media screen and (max-width: map-get($breakpoints, "sm")) {
+      grid-template-columns: 1fr;
+    }
+
+    gap: map-get($spacing, "md");
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8%;
+      left: -0.35rem;
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent);
+      border: 3px solid transparent;
+      border-radius: 50%;
+    }
+  }
+
+  &__header {
+  }
+
+  &__brief {
   }
 
   &__role {
     color: var(--accent);
-    font-size: map-get($font-size, "lg");
+    font-size: map-get($font-size, 2xl);
+    position: relative;
   }
 
   &__company {
     color: var(--text-primary);
+    font-size: map-get($font-size, xl);
   }
 
   &__date {
-    @extend .text-color--secondary;
+    color: var(--text-primary);
   }
 
   &__description {
