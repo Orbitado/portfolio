@@ -3,12 +3,12 @@ import ExperienceList from "@/components/specific/ExperienceList";
 
 function Experience() {
   return (
-    <section id="experience" className="experience">
-      <h2 className="experience__title">
-        <BriefcaseBusiness className="experience__icon" aria-hidden="true" />
+    <section id="experience" className="section">
+      <h2 className="section__heading">
+        <BriefcaseBusiness className="section__icon" aria-hidden="true" />
         Experience
       </h2>
-      <article className="experience__content">
+      <article className="section__content">
         <ExperienceList />
       </article>
     </section>
