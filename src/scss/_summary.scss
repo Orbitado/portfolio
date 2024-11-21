@@ -6,12 +6,14 @@
   margin: map-get($spacing, "xl") 0;
 
   &__title {
+    font-size: map-get($font-size, 6xl);
     margin: 0 0 map-get($spacing, "sm") 0;
     text-align: center;
     @extend .text-color--accent;
   }
 
   &__text {
+    font-size: map-get($font-size, xl);
     text-align: center;
     max-width: map-get($breakpoints, "lg");
     margin: 0 map-get($spacing, "xl");
@@ -31,24 +33,14 @@
   @extend .text-color--accent;
 }
 
-@media (min-width: map-get($breakpoints, "xs")) {
+@media screen and (max-width: map-get($breakpoints, "md")) {
   .summary {
     &__title {
-      font-size: map-get($font-size, lg);
+      font-size: map-get($font-size, 5xl);
     }
-    &__text {
-      font-size: map-get($font-size, sm);
-    }
-  }
-}
 
-@media (min-width: map-get($breakpoints, "sm")) {
-  .summary {
-    &__title {
-      font-size: map-get($font-size, xl);
-    }
     &__text {
-      font-size: map-get($font-size, md);
+      font-size: map-get($font-size, lg);
     }
   }
 }

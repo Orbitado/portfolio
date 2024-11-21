@@ -5,7 +5,7 @@
   gap: map-get($spacing, "lg");
   margin: 0 auto;
   padding: map-get($spacing, "md") 0;
-  font-size: map-get($font-size, sm);
+  font-size: map-get($font-size, "md");
 
   &__logo {
     color: var(--accent);
@@ -61,6 +61,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.1s ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 
