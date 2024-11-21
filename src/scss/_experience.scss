@@ -1,4 +1,5 @@
 .experience {
+  margin: map-get($spacing, 2xl) 0;
   &__title {
     color: var(--text-primary);
     display: flex;
@@ -12,9 +13,6 @@
     color: var(--accent);
     width: map-get($font-size, 4xl);
     height: map-get($font-size, 4xl);
-  }
-
-  &__content {
   }
 
   &__list {
@@ -60,12 +58,6 @@
       border: 3px solid transparent;
       border-radius: 50%;
     }
-  }
-
-  &__header {
-  }
-
-  &__brief {
   }
 
   &__role {
