@@ -103,6 +103,18 @@ button {
   margin: 0 auto;
 }
 
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: map-get($spacing, "sm") 0;
+}
+
+.tag-item {
+  color: var(--accent);
+  font-size: map-get($font-size, sm);
+  margin: 0 map-get($spacing, "sm") 0 0;
+}
+
 // ==================================== NAVBAR ====================================
 @import "./_navbar.scss";
 // ==================================== SUMMARY ====================================

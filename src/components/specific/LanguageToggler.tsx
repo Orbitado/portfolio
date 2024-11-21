@@ -1,5 +1,4 @@
 import { Globe } from "lucide-react";
-import React from "react";
 
 function LanguageToggler() {
   return (
