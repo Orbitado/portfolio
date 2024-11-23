@@ -1,25 +1,20 @@
 import { GraduationCap } from "lucide-react";
+import { educationList } from "@/constants/educationList";
 
 function EducationList() {
   return (
     <ul className="education__list">
-      <li className="education__item">
-        <GraduationCap className="education__icon" />
-        <div>
-          <h4 className="education__course">
-            Bachelor in Software Development and Quality
-          </h4>
-          <h5 className="education__institution">
-            University of the North Saint Thomas Aquinas
-          </h5>
-          <time className="education__date">2024 - 2026</time>
-          <p className="education__description">
-            Focused on web technologies and modern software development
-            practices. Key courses included Web Development, User Interface
-            Design, and Advanced JavaScript Programming.
-          </p>
-        </div>
-      </li>
+      {educationList.map((education) => (
+        <li key={education.course} className="education__item">
+          <GraduationCap className="education__icon" />
+          <div className="education__details">
+            <h4 className="education__course">{education.course}</h4>
+            <h5 className="education__institution">{education.institution}</h5>
+            <time className="education__date">{education.date}</time>
+            <p className="education__description">{education.description}</p>
+          </div>
+        </li>
+      ))}
     </ul>
   );
 }

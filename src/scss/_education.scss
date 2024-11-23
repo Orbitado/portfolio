@@ -1,5 +1,8 @@
 .education {
   &__list {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($spacing, xl);
     background-color: var(--bg-box);
     border: 1px solid transparent;
     border-radius: map-get($border-radius, xl);
@@ -8,14 +11,23 @@
 
   &__item {
     display: flex;
+    flex-direction: row;
+    @media screen and (max-width: map-get($breakpoints, "md")) {
+      flex-direction: column;
+    }
     align-items: flex-start;
     gap: map-get($spacing, md);
   }
 
   &__icon {
     color: var(--accent);
+    flex-shrink: 0;
     height: map-get($font-size, 4xl);
     width: map-get($font-size, 6xl);
+  }
+
+  &__details {
+    max-width: map-get($breakpoints, "lg");
   }
 
   &__course {
