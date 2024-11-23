@@ -25,3 +25,25 @@ body {
     color: var(--link-hover);
   }
 }
+
+.expandable-text {
+  &__content {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

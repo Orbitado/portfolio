@@ -1,5 +1,6 @@
 import { GraduationCap } from "lucide-react";
 import { educationList } from "@/constants/educationList";
+import ExpandableText from "../common/ExpandableText";
 
 function EducationList() {
   return (
@@ -11,7 +12,7 @@ function EducationList() {
             <h4 className="education__course">{education.course}</h4>
             <h5 className="education__institution">{education.institution}</h5>
             <time className="education__date">{education.date}</time>
-            <p className="education__description">{education.description}</p>
+            <ExpandableText text={education.description} maxLength={120} />
           </div>
         </li>
       ))}
