@@ -1,0 +1,44 @@
+.education {
+  &__list {
+    background-color: var(--bg-box);
+    border: 1px solid transparent;
+    border-radius: map-get($border-radius, xl);
+    padding: map-get($spacing, xl);
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: map-get($spacing, md);
+  }
+
+  &__icon {
+    color: var(--accent);
+    height: map-get($font-size, 4xl);
+    width: map-get($font-size, 6xl);
+  }
+
+  &__course {
+    font-size: map-get($font-size, xl);
+    color: var(--text-primary);
+    margin-bottom: map-get($spacing, sm);
+  }
+
+  &__institution {
+    font-size: map-get($font-size, md);
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: map-get($spacing, sm);
+  }
+
+  &__date {
+    color: var(--text-secondary);
+    font-size: map-get($font-size, md);
+  }
+
+  &__description {
+    color: var(--text-secondary);
+    font-size: map-get($font-size, md);
+    margin-top: map-get($spacing, sm);
+  }
+}
