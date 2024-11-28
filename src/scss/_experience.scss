@@ -1,20 +1,4 @@
 .experience {
-  margin: map-get($spacing, 2xl) 0;
-  &__title {
-    color: var(--text-primary);
-    display: flex;
-    align-items: center;
-    font-size: map-get($font-size, 4xl);
-    margin: map-get($spacing, lg) 0;
-    gap: map-get($spacing, sm);
-  }
-
-  &__icon {
-    color: var(--accent);
-    width: map-get($font-size, 4xl);
-    height: map-get($font-size, 4xl);
-  }
-
   &__list {
     display: flex;
     flex-direction: column;

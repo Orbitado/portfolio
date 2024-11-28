@@ -1,6 +1,6 @@
 export interface NavLinkProps {
-    name: string;
-    url: string;
+  name: string;
+  url: string;
 }
 
 export type Theme = "light" | "dark";
@@ -16,6 +16,10 @@ export interface ThemeContextProps {
 }
 
 export interface ThemeProviderProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
+export interface ExpandableTextProps {
+  text: string;
+  maxLength?: number;
+}
