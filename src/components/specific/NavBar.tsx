@@ -1,5 +1,4 @@
 import ThemeSwitcher from "./ThemeSwitcher";
-import LanguageToggler from "./LanguageToggler";
 import NavToggler from "./NavToggler";
 import NavList from "./NavList";
 import Link from "next/link";
@@ -26,7 +25,6 @@ function NavBar() {
         <NavList />
         <ul className="nav__list--togglers">
           <ThemeSwitcher />
-          <LanguageToggler />
           <NavToggler />
         </ul>
       </nav>
