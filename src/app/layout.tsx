@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Leonardo Valdez | Frontend Developer Portfolio",
     description:
       "Explore the portfolio of Leonardo Valdez, a skilled Frontend Developer specializing in React, TypeScript, and Next.js.",
-    images: ["icon.svg"],
+    images: ["/portfolio-img.webp"],
   },
 };
 
