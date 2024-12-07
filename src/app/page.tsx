@@ -1,6 +1,7 @@
 import Summary from "@/app/(pages)/Summary";
 import Experience from "@/app/(pages)/Experience";
 import Education from "./(pages)/Education";
+import Projects from "./(pages)/Projects";
 
 function Page() {
   return (
@@ -8,6 +9,7 @@ function Page() {
       <Summary />
       <Experience />
       <Education />
+      <Projects />
     </>
   );
 }

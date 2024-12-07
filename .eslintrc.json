@@ -8,7 +8,8 @@
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "next/core-web-vitals", 
-    "next/typescript"
+    "next/typescript",
+    "next/next/no-img-element"
   ],
   "parserOptions": {
     "ecmaFeatures": {

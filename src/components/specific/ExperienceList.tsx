@@ -1,5 +1,6 @@
 import { experienceList } from "@/constants/experienceList";
 import TagList from "@/components/common/TagList";
+import ExpandableText from "../common/ExpandableText";
 
 function ExperienceList() {
   return (
@@ -22,7 +23,7 @@ function ExperienceList() {
               </time>
             </div>
             <div className="experience__brief">
-              <p className="experience__description">{description}</p>
+              <ExpandableText text={description} maxLength={200} />
               <TagList list={technologies} />
             </div>
           </li>
