@@ -1,6 +1,6 @@
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: map-get($spacing, lg);
 
   &__content {
@@ -16,7 +16,6 @@
 
   &__image {
     width: 100%;
-    height: 200px;
     border-radius: map-get($border-radius, lg) map-get($border-radius, lg) 0 0;
     overflow: hidden;
 

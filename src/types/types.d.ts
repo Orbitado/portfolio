@@ -23,3 +23,16 @@ export interface ExpandableTextProps {
   text: string;
   maxLength?: number;
 }
+
+export interface Project {
+  img: string;
+  title: string;
+  description: string;
+  features: string[];
+  github: string;
+  demo: string;
+}
+
+export interface CardProps {
+  project: Project;
+}
