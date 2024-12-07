@@ -9,14 +9,14 @@ var _lucideReact = require("lucide-react");
 var _link = _interopRequireDefault(require("next/link"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 function Card() {
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("figure", {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "projects__card"
+  }, /*#__PURE__*/React.createElement("figure", {
     className: "projects__image"
   }, /*#__PURE__*/React.createElement("img", {
     src: "/images/image.png",
     alt: "E-commerce UI"
-  })), /*#__PURE__*/React.createElement("article", {
-    className: "projects"
-  }, /*#__PURE__*/React.createElement("section", {
+  })), /*#__PURE__*/React.createElement("section", {
     className: "projects__content"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", {
     className: "projects__heading"
@@ -49,6 +49,6 @@ function Card() {
     className: "projects__link"
   }, /*#__PURE__*/React.createElement(_lucideReact.ExternalLink, {
     className: "projects__icon"
-  }), /*#__PURE__*/React.createElement("span", null, "Live Demo")))))));
+  }), /*#__PURE__*/React.createElement("span", null, "Live Demo"))))));
 }
 var _default = exports.default = Card;
