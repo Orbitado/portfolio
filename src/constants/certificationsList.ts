@@ -1,24 +1,10 @@
 export const certificationsList = [
   {
-    course: "Backend NodeJs Developer",
+    course: "Web Development",
     institution: "Coderhouse",
     certificate:
-      "https://www.coderhouse.com/ar/certificados/6690ee700a18b173d517bd7c?lang=en",
-    project: "https://github.com/Orbitado/backend-ecommerce",
-  },
-  {
-    course: "Frontend ReactJs Developer",
-    institution: "Coderhouse",
-    certificate:
-      "https://www.coderhouse.com/ar/certificados/6487af8c7b2e96000290fb7d?lang=en",
-    project: "https://github.com/Orbitado/pokestore",
-  },
-  {
-    course: "React Js",
-    institution: "Coderhouse",
-    certificate:
-      "https://www.coderhouse.com/ar/certificados/6487af8c7b2e96000290fb7b?lang=en",
-    project: "https://github.com/Orbitado/pokestore",
+      "https://www.coderhouse.com/ar/certificados/6355b3d26e1261000e423cbd?lang=en",
+    project: "https://github.com/Orbitado/leonardo-newportfolio",
   },
   {
     course: "JavaScript",
@@ -28,10 +14,24 @@ export const certificationsList = [
     project: "https://github.com/Orbitado/boutique-ecommerce",
   },
   {
-    course: "Web Development",
+    course: "React Js",
     institution: "Coderhouse",
     certificate:
-      "https://www.coderhouse.com/ar/certificados/6355b3d26e1261000e423cbd?lang=en",
-    project: "https://github.com/Orbitado/leonardo-newportfolio",
+      "https://www.coderhouse.com/ar/certificados/6487af8c7b2e96000290fb7b?lang=en",
+    project: "https://github.com/Orbitado/pokestore",
+  },
+  {
+    course: "Frontend ReactJs Developer",
+    institution: "Coderhouse",
+    certificate:
+      "https://www.coderhouse.com/ar/certificados/6487af8c7b2e96000290fb7d?lang=en",
+    project: "https://github.com/Orbitado/pokestore",
+  },
+  {
+    course: "Backend NodeJs Developer",
+    institution: "Coderhouse",
+    certificate:
+      "https://www.coderhouse.com/ar/certificados/6690ee700a18b173d517bd7c?lang=en",
+    project: "https://github.com/Orbitado/backend-ecommerce",
   },
 ];
