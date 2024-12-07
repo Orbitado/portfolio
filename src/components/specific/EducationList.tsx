@@ -1,6 +1,5 @@
 import { GraduationCap } from "lucide-react";
 import { educationList } from "@/constants/educationList";
-import ExpandableText from "../common/ExpandableText";
 
 function EducationList() {
   return (
@@ -12,7 +11,11 @@ function EducationList() {
             <h4 className="education__title">{education.course}</h4>
             <h5 className="education__institution">{education.institution}</h5>
             <time className="education__date">{education.date}</time>
-            <ExpandableText text={education.description} maxLength={120} />
+            {education.achievements.map((achievement, index) => (
+              <p key={index} className="education__description">
+                {achievement}
+              </p>
+            ))}
           </div>
         </li>
       ))}

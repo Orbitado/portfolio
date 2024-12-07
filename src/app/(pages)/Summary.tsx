@@ -7,14 +7,12 @@ function Summary() {
       <article className="summary__content">
         <h1 className="summary__title">Frontend Developer</h1>
         <p className="summary__text">
-          Frontend Developer with expertise in{" "}
-          <span className="highlight">React</span>,{" "}
-          <span className="highlight">TypeScript</span>, and{" "}
-          <span className="highlight">Next.js</span>. Proven track record in
-          delivering high-quality web applications. Recognized for adaptability,
-          problem-solving, and effective teamwork in fast-paced environments,
-          consistently aligning with client needs and driving project success
-          with a strong business vision.
+          Front-end Developer with over 2 years of experience, dedicated to
+          crafting pixel-perfect designs and delivering seamless user
+          experiences. Proven ability to adapt quickly, communicate effectively,
+          and collaborate within agile teams to achieve innovative solutions.
+          Committed to continuous learning and delivering software solutions
+          that meet the highest standards of quality and user satisfaction.
         </p>
       </article>
       <article className="summary__actions">

@@ -1,35 +1,43 @@
 import TagList from "@/components/common/TagList";
-import { Code, ExternalLink, GithubIcon } from "lucide-react";
+import { ExternalLink, GithubIcon } from "lucide-react";
 import Link from "next/link";
-import { CardProps, Project } from "@/types/types";
+import { CardProps } from "@/types/types";
 
 function Card({ project }: CardProps) {
   return (
     <div className="projects__card">
       <figure className="projects__image">
-        <img src={project.img} alt="E-commerce UI" />
+        <Link
+          href={project.demo}
+          aria-label={`Link to the ${project.title} demo.`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={project.img} alt="E-commerce UI" />
+        </Link>
       </figure>
       <section className="projects__content">
         <div>
           <h3 className="projects__heading">{project.title}</h3>
           <p className="projects__text">{project.description}</p>
           <TagList list={["React", "Next.js", "TypeScript", "Tailwind CSS"]} />
-          <h4 className="projects__subheading">
-            <Code className="projects__icon" aria-hidden="true" />
-            Key Features
-          </h4>
-          <ul className="projects__list">
-            {project.features.map((feature: string) => (
-              <li key={feature} className="projects__list-item">
-                {feature}
-              </li>
-            ))}
-          </ul>
           <div className="projects__links">
-            <Link href={project.github} className="projects__link">
+            <Link
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Link to the ${project.title} code.`}
+              className="projects__link"
+            >
               <GithubIcon className="projects__icon" /> <span>Code</span>
             </Link>
-            <Link href={project.demo} className="projects__link">
+            <Link
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Link to the ${project.title} demo.`}
+              className="projects__link"
+            >
               <ExternalLink className="projects__icon" />
               <span>Live Demo</span>
             </Link>

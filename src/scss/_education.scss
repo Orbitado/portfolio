@@ -102,7 +102,7 @@
   }
 
   &__description {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-size: map-get($font-size, md);
     margin-top: map-get($spacing, sm);
   }

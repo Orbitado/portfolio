@@ -1,13 +1,13 @@
 import Card from "@/components/common/Card";
-import { ecommerce } from "@/constants/projects";
+import { gloobcamp, aipromptwizard } from "@/constants/projects";
 
 function Projects() {
   return (
     <section id="projects" className="projects-section">
       <h2 className="section__heading">Projects</h2>
       <article className="projects">
-        <Card project={ecommerce} />
-        <Card project={ecommerce} />
+        <Card project={gloobcamp} />
+        <Card project={aipromptwizard} />
       </article>
     </section>
   );

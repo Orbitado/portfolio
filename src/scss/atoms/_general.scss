@@ -41,3 +41,24 @@
     margin: map-get($spacing, "md") 0;
   }
 }
+
+.expandable-container {
+  margin-bottom: 1rem;
+}
+
+.expandable-container__content {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.expandable-container__button {
+  color: var(--accent);
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.expandable-container__button:hover {
+  text-decoration: underline;
+}

@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: map-get($spacing, lg);
+  padding: map-get($spacing, xl) 0;
 
   &__content {
     background-color: var(--bg-section);
@@ -44,36 +45,6 @@
     margin-bottom: map-get($spacing, md);
     font-size: map-get($font-size, md);
     color: var(--text-secondary);
-  }
-
-  &__subheading {
-    margin: map-get($spacing, md) 0 map-get($spacing, sm) 0;
-    font-weight: map-get($font-weight, semibold);
-    font-size: map-get($font-size, lg);
-    display: flex;
-    align-items: center;
-    gap: map-get($spacing, sm);
-    & .projects__icon {
-      color: var(--accent);
-    }
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: map-get($spacing, sm);
-    margin-bottom: map-get($spacing, md);
-    &-item {
-      font-size: map-get($font-size, md);
-      color: var(--text-secondary);
-      &::before {
-        content: "• ";
-        font-size: map-get($font-size, lg);
-        color: var(--accent);
-        margin: 0 map-get($spacing, md);
-      }
-    }
   }
 
   &__links {

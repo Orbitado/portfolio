@@ -1,6 +1,7 @@
 import { experienceList } from "@/constants/experienceList";
 import TagList from "@/components/common/TagList";
 import ExpandableText from "../common/ExpandableText";
+import ExpandableContainer from "../common/ExpandableContainer";
 
 function ExperienceList() {
   return (
@@ -13,6 +14,7 @@ function ExperienceList() {
           endDate,
           description,
           technologies,
+          softSkills,
         }) => (
           <li key={company} className="experience__item">
             <div className="experience__header">
@@ -22,9 +24,14 @@ function ExperienceList() {
                 {startDate} - {endDate}
               </time>
             </div>
-            <div className="experience__brief">
-              <ExpandableText text={description} maxLength={200} />
+            <div className="experience__description">
+              <ExpandableContainer maxHeight={100}>
+                {description.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </ExpandableContainer>
               <TagList list={technologies} />
+              <TagList list={softSkills} />
             </div>
           </li>
         )
