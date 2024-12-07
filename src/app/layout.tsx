@@ -12,7 +12,7 @@ const onest = Onest({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vleonardojuanpablo.vercel.app/"),
+  metadataBase: new URL("https://vleonardojuanpablo.com/"),
   title:
     "Leonardo Valdez | Frontend Developer Portfolio – React, TypeScript, Next.js Expert",
   icons: {
@@ -40,10 +40,9 @@ export const metadata: Metadata = {
     "Tucuman Argentina developer",
   ],
   alternates: {
-    canonical: "https://vleonardojuanpablo.vercel.app/",
+    canonical: "https://vleonardojuanpablo.com/",
     languages: {
-      en: "https://vleonardojuanpablo.vercel.app/",
-      es: "https://vleonardojuanpablo.vercel.app/",
+      en: "https://vleonardojuanpablo.com/",
     },
   },
   openGraph: {
@@ -51,11 +50,11 @@ export const metadata: Metadata = {
       "Leonardo Valdez | Frontend Developer Portfolio – React, TypeScript, Next.js Expert",
     description:
       "Explore the portfolio of Leonardo Valdez, a skilled Frontend Developer specializing in React, TypeScript, and Next.js. Connect with Leonardo to bring high-quality, scalable web solutions to life.",
-    url: "https://vleonardojuanpablo.vercel.app/",
+    url: "https://vleonardojuanpablo.com/",
     type: "website",
     images: [
       {
-        url: "icon.svg",
+        url: "/portfolio-img.webp",
         width: 1200,
         height: 630,
         alt: "Leonardo Valdez Portfolio Thumbnail",
