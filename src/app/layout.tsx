@@ -54,19 +54,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/portfolio-img.webp",
+        url: "/images/portfolio-img.webp",
         width: 1200,
         height: 630,
         alt: "Leonardo Valdez Portfolio Thumbnail",
       },
     ],
+    siteName: "Leonardo Valdez Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Leonardo Valdez | Frontend Developer Portfolio",
     description:
       "Explore the portfolio of Leonardo Valdez, a skilled Frontend Developer specializing in React, TypeScript, and Next.js.",
-    images: ["/portfolio-img.webp"],
+    images: ["/images/portfolio-img.webp"],
   },
 };
 
