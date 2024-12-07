@@ -1,0 +1,65 @@
+.experience {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($spacing, "md");
+    position: relative;
+
+    &::before {
+      border-left: 2px solid var(--text-secondary);
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      height: 100%;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: map-get($spacing, 2xl);
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    @media screen and (max-width: map-get($breakpoints, "md")) {
+      grid-template-columns: 1fr;
+    }
+
+    gap: map-get($spacing, "md");
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8%;
+      @media screen and (max-width: map-get($breakpoints, "md")) {
+        top: 5%;
+      }
+      left: 0.65rem;
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent);
+      border: 3px solid transparent;
+      border-radius: 50%;
+    }
+  }
+
+  &__role {
+    color: var(--accent);
+    font-size: map-get($font-size, 2xl);
+    position: relative;
+  }
+
+  &__company {
+    color: var(--text-primary);
+    font-size: map-get($font-size, xl);
+  }
+
+  &__date {
+    color: var(--text-primary);
+  }
+
+  &__description {
+    @extend .text-color--secondary;
+  }
+}

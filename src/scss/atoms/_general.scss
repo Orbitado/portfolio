@@ -1,0 +1,64 @@
+.container {
+  max-width: map-get($breakpoints, "lg");
+  padding: 0 map-get($spacing, "md");
+  margin: 0 auto;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: map-get($spacing, "sm") 0;
+}
+
+.tag-item {
+  display: inline-block;
+  background-color: var(--bg-button);
+  padding: map-get($spacing, xs) map-get($spacing, sm);
+  border-radius: map-get($border-radius, 2xl);
+  color: var(--accent);
+  font-size: map-get($font-size, sm);
+  margin: 0 map-get($spacing, "sm") map-get($spacing, "sm") 0;
+}
+
+.section {
+  margin: map-get($spacing, 2xl) 0;
+
+  &__heading {
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    font-size: map-get($font-size, 4xl);
+    gap: map-get($spacing, sm);
+  }
+
+  &__icon {
+    color: var(--accent);
+    width: map-get($font-size, 4xl);
+    height: map-get($font-size, 4xl);
+  }
+
+  &__content {
+    margin: map-get($spacing, "md") 0;
+  }
+}
+
+.expandable-container {
+  margin-bottom: 1rem;
+}
+
+.expandable-container__content {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.expandable-container__button {
+  color: var(--accent);
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.expandable-container__button:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,68 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: map-get($spacing, lg);
+  padding: map-get($spacing, xl) 0;
+
+  &__content {
+    background-color: var(--bg-section);
+    border-radius: 0 0 map-get($border-radius, lg) map-get($border-radius, lg);
+    padding: map-get($spacing, xl);
+    box-shadow: map-get($box-shadow, 2xl);
+    padding: map-get($spacing, lg);
+    background-color: var(--bg-box);
+    border: 1px solid var(--border-color);
+    text-align: left;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: map-get($border-radius, lg) map-get($border-radius, lg) 0 0;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__heading {
+    color: var(--text-primary);
+    font-size: map-get($font-size, 2xl);
+    margin-bottom: map-get($spacing, md);
+  }
+
+  &__text {
+    margin-bottom: map-get($spacing, md);
+    font-size: map-get($font-size, md);
+    color: var(--text-secondary);
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    color: var(--text-secondary);
+    font-size: map-get($font-size, md);
+    gap: map-get($spacing, md);
+    align-items: center;
+    & .projects__link {
+      &:hover {
+        color: var(--link-hover);
+      }
+      transition: color 0.3s ease-in-out;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: map-get($spacing, sm);
+    }
+  }
+}

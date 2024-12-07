@@ -1,23 +1,22 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./styles.css";
+import type { Metadata } from "next";
+import { Onest } from "next/font/google";
+import NavBar from "@/components/specific/NavBar";
+import { ThemeProvider } from "@/context/themeContext";
+import { MenuProvider } from "@/context/MenuContext";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const onest = Onest({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-onest",
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vleonardojuanpablo.vercel.app/"),
   title:
     "Leonardo Valdez | Frontend Developer Portfolio – React, TypeScript, Next.js Expert",
   icons: {
-    icon: "/images/portfolio.thumbnail.webp",
+    icon: "icon.svg",
   },
   description:
     "Explore the portfolio of Leonardo Valdez, a skilled Frontend Developer specializing in React, TypeScript, and Next.js. Connect with Leonardo to bring high-quality, scalable web solutions to life.",
@@ -56,7 +55,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/portfolio-thumbnail.webp", // Replace with actual image URL
+        url: "icon.svg",
         width: 1200,
         height: 630,
         alt: "Leonardo Valdez Portfolio Thumbnail",
@@ -68,7 +67,7 @@ export const metadata: Metadata = {
     title: "Leonardo Valdez | Frontend Developer Portfolio",
     description:
       "Explore the portfolio of Leonardo Valdez, a skilled Frontend Developer specializing in React, TypeScript, and Next.js.",
-    images: ["/images/portfolio-thumbnail.webp"], // Replace with actual image URL
+    images: ["icon.svg"],
   },
 };
 
@@ -78,9 +77,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+    <html lang="en" data-theme="light">
+      <body className={`${onest.variable}`}>
+        <ThemeProvider>
+          <MenuProvider>
+            <NavBar />
+            <main
+              className="container"
+              id="#main-content"
+              role="main"
+              tabIndex={-1}
+            >
+              {children}
+            </main>
+          </MenuProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

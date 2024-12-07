@@ -1,0 +1,109 @@
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: map-get($spacing, 2xl);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($spacing, xl);
+    background-color: var(--bg-box);
+    border: 1px solid transparent;
+    border-radius: map-get($border-radius, xl);
+    padding: map-get($spacing, xl);
+
+    &--certifications {
+      display: flex;
+      flex-direction: row;
+      gap: map-get($spacing, md);
+      background-color: var(--bg-box);
+      border: 1px solid transparent;
+      border-radius: map-get($border-radius, xl);
+      padding: map-get($spacing, xl);
+    }
+
+    &--container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: map-get($spacing, lg);
+      justify-content: space-between;
+
+      @media screen and (max-width: map-get($breakpoints, "lg")) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media screen and (max-width: map-get($breakpoints, "sm")) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: map-get($spacing, md);
+  }
+
+  &__icon {
+    color: var(--accent);
+    flex-shrink: 0;
+    height: map-get($font-size, 4xl);
+    width: map-get($font-size, 6xl);
+
+    &--certification {
+      color: var(--accent);
+      flex-shrink: 0;
+      height: map-get($font-size, 2xl);
+      width: map-get($font-size, 3xl);
+
+      &:hover {
+        transition: transform 0.3s ease-in-out;
+        transform: scale(1.1);
+        color: var(--link-hover);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__details {
+    max-width: map-get($breakpoints, "lg");
+  }
+
+  &__title {
+    font-size: map-get($font-size, xl);
+    color: var(--text-primary);
+    margin-bottom: map-get($spacing, sm);
+
+    &--certification {
+      font-size: map-get($font-size, "md");
+      color: var(--text-primary);
+    }
+  }
+
+  &__institution {
+    font-size: map-get($font-size, md);
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: map-get($spacing, sm);
+
+    &--certification {
+      font-size: map-get($font-size, "md");
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: map-get($spacing, sm);
+    }
+  }
+
+  &__date {
+    color: var(--text-secondary);
+    font-size: map-get($font-size, md);
+  }
+
+  &__description {
+    color: var(--text-primary);
+    font-size: map-get($font-size, md);
+    margin-top: map-get($spacing, sm);
+  }
+}

@@ -1,0 +1,95 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: map-get($spacing, "lg");
+  margin: 0 auto;
+  padding: map-get($spacing, "md") 0;
+  font-size: map-get($font-size, "md");
+
+  &__logo {
+    color: var(--accent);
+  }
+
+  &__icon {
+    color: var(--text-secondary);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: map-get($spacing, "md");
+
+    &--mobile {
+      display: none;
+    }
+
+    &--togglers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      flex-wrap: wrap;
+      gap: map-get($spacing, "md");
+      align-items: center;
+    }
+  }
+
+  &__item {
+    color: var(--text-secondary);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--link-hover);
+    }
+  }
+
+  &__theme-switcher {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-box);
+    padding: map-get($spacing, "sm");
+    border: 1px solid var(--bg-box);
+    border-radius: map-get($border-radius, "md");
+  }
+
+  &__item--mobile {
+    display: none;
+  }
+
+  &__toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, "md")) {
+  .nav {
+    &__item--mobile {
+      display: block;
+    }
+  }
+
+  .open {
+    background-color: var(--bg-main);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: map-get($spacing, "md");
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: map-get($spacing, "md") map-get($spacing, "lg");
+    z-index: 10;
+  }
+
+  .close {
+    display: none;
+  }
+}
