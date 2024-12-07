@@ -92,9 +92,6 @@
       flex-direction: row;
       align-items: center;
       gap: map-get($spacing, sm);
-      & .projects__icon {
-        // Estilos para los íconos dentro de los enlaces
-      }
     }
   }
 }
