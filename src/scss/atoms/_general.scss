@@ -11,9 +11,13 @@
 }
 
 .tag-item {
+  display: inline-block;
+  background-color: var(--bg-button);
+  padding: map-get($spacing, xs) map-get($spacing, sm);
+  border-radius: map-get($border-radius, 2xl);
   color: var(--accent);
   font-size: map-get($font-size, sm);
-  margin: 0 map-get($spacing, "sm") 0 0;
+  margin: 0 map-get($spacing, "sm") map-get($spacing, "sm") 0;
 }
 
 .section {
