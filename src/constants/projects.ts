@@ -1,5 +1,5 @@
 export const gloobcamp = {
-  img: "/images/gloobcamp.png",
+  img: "/images/gloobcamp.webp",
   title: "Gloobcamp",
   description:
     "An educational platform for teaching HTML, CSS, JavaScript, and React, with lesson materials, quizzes, and progress tracking, which improved learning outcomes. More than 10 people prepared for job interviews with 80% success through GloobCamp.",
@@ -13,7 +13,7 @@ export const gloobcamp = {
 };
 
 export const aipromptwizard = {
-  img: "/images/aipromptwizard.png",
+  img: "/images/aipromptwizard.webp",
   title: "AI Prompt Wizard",
   description:
     "An AI-powered tool for creating customized prompts for AI models like ChatGPT, DALL·E, and MidJourney, which optimized user interactions and enhanced AI results. The system suggested tailored prompts based on user input and settings.",
