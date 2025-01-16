@@ -7,7 +7,7 @@ function Summary() {
       <article className="summary__content">
         <h1 className="summary__title">Frontend Developer</h1>
         <p className="summary__text">
-          Front-end Developer with over 2 years of experience, dedicated to
+          Front-end Developer with over 1 year of experience, dedicated to
           crafting pixel-perfect designs and delivering seamless user
           experiences. Proven ability to adapt quickly, communicate effectively,
           and collaborate within agile teams to achieve innovative solutions.
