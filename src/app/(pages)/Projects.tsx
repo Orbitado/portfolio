@@ -1,5 +1,5 @@
 import Card from "@/components/common/Card";
-import { gloobcamp, aipromptwizard } from "@/constants/projects";
+import { gloobcamp, aipromptwizard, ecommerce } from "@/constants/projects";
 
 function Projects() {
   return (
@@ -8,6 +8,7 @@ function Projects() {
       <article className="projects">
         <Card project={gloobcamp} />
         <Card project={aipromptwizard} />
+        <Card project={ecommerce} />
       </article>
     </section>
   );

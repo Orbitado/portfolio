@@ -31,6 +31,7 @@ export interface Project {
   features: string[];
   github: string;
   demo: string;
+  technologies: string[];
 }
 
 export interface CardProps {

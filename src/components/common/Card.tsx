@@ -20,7 +20,7 @@ function Card({ project }: CardProps) {
         <div>
           <h3 className="projects__heading">{project.title}</h3>
           <p className="projects__text">{project.description}</p>
-          <TagList list={["React", "Next.js", "TypeScript", "Tailwind CSS"]} />
+          <TagList list={project.technologies} />
           <div className="projects__links">
             <Link
               href={project.github}
