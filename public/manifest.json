@@ -1,0 +1,17 @@
+{
+  "name": "Leonardo Valdez Portfolio",
+  "short_name": "LV Portfolio",
+  "description": "Portfolio of Leonardo Valdez, Frontend Engineer specializing in React, TypeScript, and Next.js",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+} 

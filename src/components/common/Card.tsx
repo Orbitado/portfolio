@@ -2,6 +2,7 @@ import TagList from "@/components/common/TagList";
 import { ExternalLink, GithubIcon } from "lucide-react";
 import Link from "next/link";
 import { CardProps } from "@/types/types";
+import ExpandableText from "./ExpandableText";
 
 function Card({ project }: CardProps) {
   return (
@@ -19,7 +20,11 @@ function Card({ project }: CardProps) {
       <section className="projects__content">
         <div>
           <h3 className="projects__heading">{project.title}</h3>
-          <p className="projects__text">{project.description}</p>
+          <ExpandableText
+            className="projects__text"
+            text={project.description}
+            maxLength={150}
+          />
           <TagList list={project.technologies} />
           <div className="projects__links">
             <Link

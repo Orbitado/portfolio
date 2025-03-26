@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { ExpandableTextProps } from "@/types/types";
 
-function ExpandableText({ text, maxLength = 100 }: ExpandableTextProps) {
+function ExpandableText({ text, maxLength = 100, className }: ExpandableTextProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => setIsExpanded((prev) => !prev);

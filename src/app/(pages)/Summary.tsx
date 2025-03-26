@@ -5,20 +5,19 @@ function Summary() {
   return (
     <section id="summary" className="summary">
       <article className="summary__content">
-        <h1 className="summary__title">Frontend Developer</h1>
+        <h1 className="summary__title">Frontend Engineer</h1>
         <p className="summary__text">
-          Front-end Developer with over 1 year of experience, dedicated to
-          crafting pixel-perfect designs and delivering seamless user
-          experiences. Proven ability to adapt quickly, communicate effectively,
-          and collaborate within agile teams to achieve innovative solutions.
-          Committed to continuous learning and delivering software solutions
-          that meet the highest standards of quality and user satisfaction.
+          Frontend Engineer with over 2 years of experience specializing in
+          Next.js and React.js. Passionate about building secure, scalable,
+          accesible and high-performance applications, I have consistently
+          reduced load times by up to 35% and boosted user engagement by 40% in
+          previous roles.
         </p>
       </article>
       <article className="summary__actions">
         <Link
           href="/assets/resume.pdf"
-          download="Valdez Leonardo Juan Pablo - Frontend Developer.pdf"
+          download="Valdez Leonardo - Frontend Engineer.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn--primary"

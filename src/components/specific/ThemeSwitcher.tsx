@@ -13,14 +13,15 @@ function ThemeSwitcher() {
     <li className="nav__theme-switcher">
       <button
         type="button"
-        aria-label="Toggle dark mode"
+        aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
         className="nav__toggler"
         onClick={toggleTheme}
+        title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
       >
         {theme === "dark" ? (
-          <Moon className="nav__icon" />
+          <Moon className="nav__icon" aria-hidden="true" />
         ) : (
-          <Sun className="nav__icon" />
+          <Sun className="nav__icon" aria-hidden="true" />
         )}
       </button>
     </li>

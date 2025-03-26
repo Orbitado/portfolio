@@ -20,6 +20,24 @@
   margin: 0 map-get($spacing, "sm") map-get($spacing, "sm") 0;
 }
 
+.tag-list-container {
+  margin-bottom: map-get($spacing, md);
+}
+
+.tag-list__button {
+  color: var(--accent);
+  font-size: map-get($font-size, sm);
+  background: none;
+  border: none;
+  padding: map-get($spacing, xs) map-get($spacing, sm);
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--link-hover);
+  }
+}
+
 .section {
   margin: map-get($spacing, 2xl) 0;
 

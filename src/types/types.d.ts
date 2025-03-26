@@ -22,6 +22,7 @@ export interface ThemeProviderProps {
 export interface ExpandableTextProps {
   text: string;
   maxLength?: number;
+  className?: string;
 }
 
 export interface Project {

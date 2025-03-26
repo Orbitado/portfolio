@@ -30,6 +30,7 @@ html {
   overflow-x: hidden;
   min-height: 200vh;
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 main {
@@ -113,3 +114,7 @@ button {
 @import "./_projects.scss";
 // // ==================================== SKILLS ====================================
 // @import "./_skills.scss";
+// ==================================== NOT FOUND ====================================
+@import "./_not-found.scss";
+// ==================================== FOOTER ====================================
+@import "./_footer.scss";
