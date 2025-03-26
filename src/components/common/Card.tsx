@@ -1,6 +1,7 @@
 import TagList from "@/components/common/TagList";
 import { ExternalLink, GithubIcon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { CardProps } from "@/types/types";
 import ExpandableText from "./ExpandableText";
 
@@ -14,7 +15,14 @@ function Card({ project }: CardProps) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={project.img} alt="E-commerce UI" />
+          <Image 
+            src={project.img} 
+            alt={`${project.title} project screenshot`} 
+            width={640} 
+            height={360}
+            className="projects__img"
+            priority={true}
+          />
         </Link>
       </figure>
       <section className="projects__content">
