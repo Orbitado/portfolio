@@ -6,6 +6,10 @@ import Footer from "@/components/specific/Footer";
 import { ThemeProvider } from "@/context/themeContext";
 import { MenuProvider } from "@/context/MenuContext";
 import Script from "next/script";
+import { cookies } from 'next/headers';
+import type { Theme } from "@/types/types";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 const onest = Onest({
   subsets: ["latin"],
@@ -116,13 +120,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const themeCookie = cookieStore.get('theme');
+  const theme = (themeCookie?.value as Theme) || 'light';
+  
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-theme={theme}>
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
@@ -133,6 +141,8 @@ export default function RootLayout({
             <NavBar />
             <main className="container" id="main-content" role="main">
               {children}
+              <SpeedInsights />
+              <Analytics />
             </main>
             <Footer />
           </MenuProvider>
