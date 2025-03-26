@@ -12,12 +12,12 @@ function CertificationList() {
           {certificationsList.map((certification) => (
             <li key={certification.course} className="education__item">
               <div className="education__details">
-                <h4 className="education__title--certification">
+                <h3 className="education__title--certification">
                   {certification.course}
-                </h4>
-                <h5 className="education__institution--certification">
+                </h3>
+                <h4 className="education__institution--certification">
                   {certification.institution}
-                </h5>
+                </h4>
                 <Link
                   href={certification.certificate}
                   aria-label={`Link to the ${certification.course} certificate.`}

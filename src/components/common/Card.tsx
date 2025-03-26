@@ -21,7 +21,7 @@ function Card({ project }: CardProps) {
             width={640} 
             height={360}
             className="projects__img"
-            priority={true}
+            loading="lazy"
           />
         </Link>
       </figure>

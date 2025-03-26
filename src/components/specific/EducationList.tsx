@@ -8,8 +8,8 @@ function EducationList() {
         <li key={education.course} className="education__item">
           <GraduationCap className="education__icon" />
           <div className="education__details">
-            <h4 className="education__title">{education.course}</h4>
-            <h5 className="education__institution">{education.institution}</h5>
+            <h3 className="education__title">{education.course}</h3>
+            <h4 className="education__institution">{education.institution}</h4>
             <time className="education__date">{education.date}</time>
             {education.achievements.map((achievement, index) => (
               <p key={index} className="education__description">

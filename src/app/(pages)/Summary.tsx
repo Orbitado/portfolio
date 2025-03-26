@@ -15,7 +15,7 @@ function Summary() {
         </p>
       </article>
       <article className="summary__actions">
-        <Link
+        <a
           href="/resume.pdf"
           download="Valdez Leonardo - Frontend Engineer.pdf"
           target="_blank"
@@ -25,7 +25,7 @@ function Summary() {
         >
           <Download className="btn__icon" />
           <span>Download Resume</span>
-        </Link>
+        </a>
         <Link
           href="mailto:vleonardojuanpablo@icloud.com"
           className="btn btn--secondary"
