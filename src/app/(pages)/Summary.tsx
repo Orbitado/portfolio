@@ -16,7 +16,7 @@ function Summary() {
       </article>
       <article className="summary__actions">
         <Link
-          href="/assets/resume.pdf"
+          href="/resume.pdf"
           download="Valdez Leonardo - Frontend Engineer.pdf"
           target="_blank"
           rel="noopener noreferrer"
