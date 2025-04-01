@@ -2,16 +2,17 @@ import { Download, Mail } from "lucide-react";
 import Link from "next/link";
 
 function Summary() {
+  const currentYear = new Date().getFullYear();
   return (
     <section id="summary" className="summary">
       <article className="summary__content">
         <h1 className="summary__title">Frontend Engineer</h1>
         <p className="summary__text">
-          Frontend Engineer with over 2 years of experience specializing in
-          Next.js and React.js. Passionate about building secure, scalable,
-          accesible and high-performance applications, I have consistently
-          reduced load times by up to 35% and boosted user engagement by 40% in
-          previous roles.
+          Frontend Engineer with over {currentYear - 2022} years of experience
+          specializing in Next.js and React.js. Passionate about building
+          secure, scalable, accesible and high-performance applications, I have
+          consistently reduced load times by up to 35% and boosted user
+          engagement by 40% in previous roles.
         </p>
       </article>
       <article className="summary__actions">

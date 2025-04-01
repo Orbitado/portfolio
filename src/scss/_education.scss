@@ -3,6 +3,27 @@
   flex-direction: column;
   gap: map-get($spacing, 2xl);
 
+  &__container {
+    width: 100%;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: map-get($spacing, md);
+    margin-bottom: map-get($spacing, lg);
+    
+    @media screen and (max-width: map-get($breakpoints, "sm")) {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: map-get($spacing, md);
+    }
+  }
+  
+  &__certifications-wrapper {
+    width: 100%;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -12,14 +33,23 @@
     border-radius: map-get($border-radius, xl);
     padding: map-get($spacing, xl);
 
+    @media screen and (max-width: map-get($breakpoints, "sm")) {
+      padding: map-get($spacing, md);
+      gap: map-get($spacing, lg);
+    }
+
     &--certifications {
       display: flex;
-      flex-direction: row;
-      gap: map-get($spacing, md);
+      flex-direction: column;
+      gap: map-get($spacing, lg);
       background-color: var(--bg-box);
       border: 1px solid transparent;
       border-radius: map-get($border-radius, xl);
       padding: map-get($spacing, xl);
+      
+      @media screen and (max-width: map-get($breakpoints, "sm")) {
+        padding: map-get($spacing, md);
+      }
     }
 
     &--container {
@@ -35,6 +65,7 @@
 
       @media screen and (max-width: map-get($breakpoints, "sm")) {
         grid-template-columns: repeat(1, 1fr);
+        gap: map-get($spacing, md);
       }
     }
   }
@@ -44,6 +75,21 @@
     flex-direction: row;
     align-items: flex-start;
     gap: map-get($spacing, md);
+    
+    @media screen and (max-width: map-get($breakpoints, "sm")) {
+      flex-direction: column;
+      gap: map-get($spacing, sm);
+    }
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    
+    @media screen and (max-width: map-get($breakpoints, "sm")) {
+      width: 100%;
+      margin-bottom: map-get($spacing, sm);
+    }
   }
 
   &__icon {
@@ -51,34 +97,54 @@
     flex-shrink: 0;
     height: map-get($font-size, 4xl);
     width: map-get($font-size, 6xl);
-
+    
+    @media screen and (max-width: map-get($breakpoints, "sm")) {
+      margin-bottom: map-get($spacing, xs);
+    }
+    
     &--certification {
       color: var(--accent);
       flex-shrink: 0;
-      height: map-get($font-size, 2xl);
-      width: map-get($font-size, 3xl);
+      height: map-get($font-size, 4xl);
+      width: map-get($font-size, 4xl);
+      padding: map-get($spacing, sm);
+      border-radius: 50%;
+      background-color: var(--bg-tertiary);
+      border: 1px solid transparent;
+      transition: all 0.1s ease-in-out;
 
       &:hover {
-        transition: transform 0.3s ease-in-out;
         transform: scale(1.1);
         color: var(--link-hover);
+        background-color: var(--bg-highlight);
         cursor: pointer;
+        border-color: var(--accent);
       }
     }
   }
 
   &__details {
     max-width: map-get($breakpoints, "lg");
+    
+    @media screen and (max-width: map-get($breakpoints, "sm")) {
+      width: 100%;
+    }
   }
 
   &__title {
     font-size: map-get($font-size, xl);
     color: var(--text-primary);
     margin-bottom: map-get($spacing, sm);
+    
+    @media screen and (max-width: map-get($breakpoints, "sm")) {
+      font-size: map-get($font-size, lg);
+    }
 
     &--certification {
-      font-size: map-get($font-size, "md");
+      font-size: map-get($font-size, "lg");
       color: var(--text-primary);
+      margin-bottom: map-get($spacing, xs);
+      font-weight: 600;
     }
   }
 
@@ -92,7 +158,7 @@
       font-size: map-get($font-size, "md");
       color: var(--text-secondary);
       font-weight: 400;
-      margin-bottom: map-get($spacing, sm);
+      margin-bottom: map-get($spacing, xs);
     }
   }
 
@@ -101,9 +167,65 @@
     font-size: map-get($font-size, md);
   }
 
+  &__achievements {
+    list-style-type: disc;
+    padding-left: map-get($spacing, lg);
+    margin-top: map-get($spacing, md);
+    
+    @media screen and (max-width: map-get($breakpoints, "sm")) {
+      padding-left: map-get($spacing, md);
+    }
+  }
+
   &__description {
     color: var(--text-primary);
     font-size: map-get($font-size, md);
     margin-top: map-get($spacing, sm);
+    
+    @media screen and (max-width: map-get($breakpoints, "sm")) {
+      margin-top: map-get($spacing, xs);
+    }
+  }
+
+  &__cert-item {
+    list-style: none;
+  }
+
+  &__cert-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-secondary);
+    border-radius: map-get($border-radius, md);
+    padding: map-get($spacing, md);
+    height: 100%;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: var(--bg-highlight);
+      border-color: var(--accent);
+    }
+  }
+
+  &__cert-content {
+    flex: 1;
+    margin-bottom: map-get($spacing, sm);
+  }
+
+  &__cert-links {
+    display: flex;
+    gap: map-get($spacing, md);
+    margin-top: map-get($spacing, sm);
+    justify-content: flex-end;
+  }
+
+  &__cert-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
   }
 }

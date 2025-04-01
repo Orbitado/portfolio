@@ -15,10 +15,6 @@ export const navbarLinks = [
     name: "Projects",
     url: "/#projects",
   },
-  {
-    name: "Skills",
-    url: "/#skills",
-  },
 ];
 
 export const menuIcons = [
