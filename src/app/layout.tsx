@@ -10,6 +10,7 @@ import { cookies } from 'next/headers';
 import type { Theme } from "@/types/types";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
+import ScrollToTop from "@/components/common/ScrollToTop";
 
 const onest = Onest({
   subsets: ["latin"],
@@ -145,6 +146,7 @@ export default async function RootLayout({
               <Analytics />
             </main>
             <Footer />
+            <ScrollToTop />
           </MenuProvider>
         </ThemeProvider>
         <Script
