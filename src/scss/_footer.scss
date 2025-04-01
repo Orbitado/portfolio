@@ -6,12 +6,13 @@
   border-top: 1px solid var(--accent-transparent);
   
   &-container {
-    max-width: map-get($breakpoints, xl);
+    max-width: map-get($breakpoints, lg);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    padding: 0 map-get($spacing, "md");
     
     @media (min-width: map-get($breakpoints, md)) {
       flex-direction: row;

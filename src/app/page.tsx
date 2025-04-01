@@ -2,6 +2,7 @@ import Summary from "@/app/(pages)/Summary";
 import Experience from "@/app/(pages)/Experience";
 import Education from "./(pages)/Education";
 import Projects from "./(pages)/Projects";
+import Contact from "./(pages)/Contact";
 
 function Page() {
   return (
@@ -10,6 +11,7 @@ function Page() {
       <Experience />
       <Education />
       <Projects />
+      <Contact />
     </>
   );
 }
