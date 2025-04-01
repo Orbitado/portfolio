@@ -55,6 +55,14 @@
     font-size: map-get($font-size, xl);
   }
 
+  &__company-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__date {
     color: var(--text-primary);
   }

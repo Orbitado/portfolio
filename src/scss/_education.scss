@@ -194,7 +194,7 @@
   &__cert-card {
     display: flex;
     flex-direction: column;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-main);
     border-radius: map-get($border-radius, md);
     padding: map-get($spacing, md);
     height: 100%;
@@ -204,7 +204,6 @@
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      background-color: var(--bg-highlight);
       border-color: var(--accent);
     }
   }

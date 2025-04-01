@@ -1,6 +1,7 @@
 export const experienceList = [
   {
-    company: "Bettershore",
+    company: "Bettershore, Switzerland",
+    companyUrl: "https://www.bettershore.com/",
     position: "Frontend Engineer (Semi-Senior)",
     startDate: "2025",
     endDate: "Present",
@@ -37,7 +38,8 @@ export const experienceList = [
     ],
   },
   {
-    company: "Globant",
+    company: "Globant, Argentina",
+    companyUrl: "https://www.globant.com/",
     position: "Frontend Engineer (Intern)",
     startDate: "2024",
     endDate: "2024",
