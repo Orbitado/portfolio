@@ -41,4 +41,11 @@ export const certificationsList = [
       "https://pub.coderhouse.com/legacy-certificates/6785d2559f7020f017195d1b?lang",
     project: "https://github.com/Orbitado/backend-ecommerce",
   },
+  {
+    course: "Backend Programming III: Backend Security and Quality Assurance",
+    institution: "Coderhouse",
+    certificate:
+      "https://pub.coderhouse.com/certificates/28c0d5d6-21af-4dfd-a69d-b08bb968f992?v=1",
+    project: "https://github.com/Orbitado/RecursosBackend-Adoptme",
+  },
 ];
